@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Answer Result</title>
+</head>
+<body>
+   <h1>Answer Result</h1>
+   {% if is_correct %}
+       <p>Your answer is correct!</p>
+   {% else %}
+       <p>Sorry, your answer is incorrect.</p>
+   {% endif %}
+   <a href="/get_question">Get Another Question</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count</title>
+</head>
+<body>
+    <h1>Word Count Tool</h1>
+    <form method="post" action="/count_words">
+        <textarea name="text" rows="5" cols="40" placeholder="Paste your text here"></textarea>
+        <br>
+        <input type="submit" value="Count Words">
+    </form>
+    {% if word_count %}
+        <p>Number of words in the text: {{ word_count }}</p>
+    {% endif %}
+</body>
+</html>

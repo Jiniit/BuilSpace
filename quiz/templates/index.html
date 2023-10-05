@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Submit a Question</title>
+</head>
+<body>
+   <h1>Submit a Question</h1>
+   <form method="POST" action="/submit">
+       <label for="question">Question:</label>
+       <input type="text" name="question" required><br>
+       <label for="choice1">Choice 1:</label>
+       <input type="text" name="choice1" required><br>
+       <label for="choice2">Choice 2:</label>
+       <input type="text" name="choice2" required><br>
+       <label for="choice3">Choice 3:</label>
+       <input type="text" name="choice3" required><br>
+       <label for="choice4">Choice 4:</label>
+       <input type="text" name="choice4" required><br>
+       <label for="correct_choice">Correct Choice (1-4):</label>
+       <input type="number" name="correct_choice" required min="1" max="4"><br>
+       <input type="submit" value="Submit">
+   </form>
+   <a href="/get_question">Get a Question</a>
+</body>
+</html>

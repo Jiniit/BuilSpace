@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSVP Form</title>
+</head>
+<body>
+    <h1>Event RSVP</h1>
+    <form method="POST" action="/submit">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="response">Will you attend?</label>
+        <select name="response" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/list_rsvps">View RSVPs</a>
+</body>
+</html>

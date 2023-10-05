@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Answer a Question</title>
+</head>
+<body>
+   <h1>Answer a Question</h1>
+   <p>{{ question[1] }}</p>
+   <form method="POST" action="/answer">
+       <label><input type="radio" name="choice" value="1">{{ question[2] }}</label><br>
+       <label><input type="radio" name="choice" value="2">{{ question[3] }}</label><br>
+       <label><input type="radio" name="choice" value="3">{{ question[4] }}</label><br>
+       <label><input type="radio" name="choice" value="4">{{ question[5] }}</label><br>
+       <input type="hidden" name="question_id" value="{{ question[0] }}">
+       <input type="submit" value="Submit">
+   </form>
+   <a href="/">Submit a Question</a>
+</body>
+</html>

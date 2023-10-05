@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSVP List</title>
+</head>
+<body>
+    <h1>RSVP List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rsvp in rsvps %}
+                <tr>
+                    <td>{{ rsvp[0] }}</td>
+                    <td>{{ rsvp[1] }}</td>
+                    <td>{{ rsvp[2] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to RSVP Form</a>
+</body>
+</html>

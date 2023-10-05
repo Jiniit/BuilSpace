@@ -1,0 +1,34 @@
+<!-- todo.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To-Do List</h1>
+        </div>
+
+        <!-- Task input form -->
+        <form method="POST" action="/add_task">
+            <input type="text" name="task" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- To-Do List -->
+        <ul class="todo-list">
+            {% for task in tasks %}
+                <li>
+                    <input type="checkbox" id="task_{{ loop.index }}" name="task_{{ loop.index }}" class="task-checkbox">
+                    <label for="task_{{ loop.index }}" class="task-label {% if task.done %}completed{% endif %}">
+                        {{ task.text }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
